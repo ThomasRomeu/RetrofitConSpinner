@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
     }
     private fun getRetrofit(): Retrofit{
         return Retrofit.Builder()
-            .baseUrl("https://dog.ceo/api/")
+            .baseUrl(URL_DOGS)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
@@ -85,5 +85,9 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
     override fun onQueryTextChange(p0: String?): Boolean {
         return false
+    }
+
+    companion object {
+        const val URL_DOGS = "https://dog.ceo/api/"
     }
 }
