@@ -117,7 +117,6 @@ class MainActivity : AppCompatActivity() {
                 .build()
         }
 
-
         companion object {
             const val URL_DOGS = "https://dog.ceo/api/"
         }
